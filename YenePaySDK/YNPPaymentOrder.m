@@ -10,6 +10,18 @@
 
 @implementation YNPPaymentOrder
 
+- (instancetype)init {
+    return [self initWithMerchantOrderId:NSUUID.UUID.UUIDString];
+}
+
+- (instancetype)initWithMerchantOrderId:(NSString *)merchantOrderId {
+    self = [super init];
+    if (self) {
+        _merchantOrderId = [merchantOrderId copy];
+    }
+    return self;
+}
+
 - (id)copyWithZone:(nullable NSZone *)zone {
     YNPPaymentOrder *clone = [[YNPPaymentOrder alloc] init];
     clone.merchantOrderId = self.merchantOrderId;

@@ -8,7 +8,7 @@
 import UIKit
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, YNPPaymentOrderManagerDelegate {
     public var window: UIWindow?
         
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -27,12 +27,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func configureYenePay() {
         YNPPaymentOrderManager.sharedInstance().useSandboxEnabled = true
-        //YNPPaymentOrderManager.sharedInstance().merchantCode = "0001"
-        YNPPaymentOrderManager.sharedInstance().merchantCode = "0734"
-        YNPPaymentOrderManager.sharedInstance().ipnUrl = "https://www.example.com/ipn"
+        YNPPaymentOrderManager.sharedInstance().delegate = self
+        YNPPaymentOrderManager.sharedInstance().merchantCode = "0001"
         YNPPaymentOrderManager.sharedInstance().returnUrl = "com.yenepay.ios.YenePaySDKSampleApp.ynp://"
     }
     
+    func paymentOrderManager(_ paymentManager: YNPPaymentOrderManager, didReceive paymentResponse: YNPPaymentResponse) {
+        print("Payment response for merchantOrderId \(paymentResponse.merchantOrderId) = \(paymentResponse.statusText)")
+    }
     
     static func checkout(presentingViewController: UIViewController, completionHandler: ((Bool /* Payment Completed? */)->Void)?) {
         if ShoppingCart.shared.totalPrice == 0.0 {
@@ -45,8 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return
         }
         
-        let payment = YNPPaymentOrder()
-        payment.merchantOrderId = UUID().uuidString
+        let payment = YNPPaymentOrder(merchantOrderId: UUID().uuidString)
         payment.paymentProcess = ShoppingCart.shared.items.count == 1 ? YNPPaymentProcessTypeExpress : YNPPaymentProcessTypeCart
         
         var paymentItems: [YNPOrderedItem] = []

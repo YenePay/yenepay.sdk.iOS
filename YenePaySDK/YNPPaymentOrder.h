@@ -22,9 +22,11 @@ typedef enum : NSInteger {
 
 @interface YNPPaymentOrder : NSObject <NSCopying>
 
-@property (nonatomic, copy, nullable) NSString *merchantOrderId;
+- (instancetype)initWithMerchantOrderId:(NSString *)merchantOrderId NS_DESIGNATED_INITIALIZER;
+
+@property (nonatomic, copy) NSString *merchantOrderId;
 @property (nonatomic) YNPPaymentProcessType paymentProcess;     // default is YNPPaymentProcessTypeExpress
-@property (nonatomic, /*deep*/ copy) NSArray<YNPOrderedItem *> *items;
+@property (nonatomic, /*deep*/ copy, nullable) NSArray<YNPOrderedItem *> *items;
 @property (nonatomic) double discount;      // default is 0.0
 @property (nonatomic) double tax1;          // default is 0.0
 @property (nonatomic) double tax2;          // default is 0.0

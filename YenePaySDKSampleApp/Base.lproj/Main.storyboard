@@ -138,7 +138,7 @@
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HaY-ed-qfV">
                                             <rect key="frame" x="20" y="11" width="40" height="40"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="40" id="Cnu-pH-k0C"/>
+                                                <constraint firstAttribute="width" secondItem="HaY-ed-qfV" secondAttribute="height" multiplier="1:1" id="ORu-52-9l6"/>
                                                 <constraint firstAttribute="width" constant="40" id="d94-PJ-srq"/>
                                             </constraints>
                                         </imageView>
@@ -180,7 +180,7 @@
                                         <constraint firstItem="oiw-BH-l64" firstAttribute="bottom" secondItem="x29-LU-aYd" secondAttribute="bottom" id="iGJ-SX-3rG"/>
                                         <constraint firstItem="HaY-ed-qfV" firstAttribute="leading" secondItem="8cV-e2-FU1" secondAttribute="leadingMargin" id="kLp-lN-LLU"/>
                                         <constraint firstItem="x29-LU-aYd" firstAttribute="leading" secondItem="HaY-ed-qfV" secondAttribute="trailing" constant="8" symbolic="YES" id="mmN-4S-u4p"/>
-                                        <constraint firstItem="HaY-ed-qfV" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="8cV-e2-FU1" secondAttribute="bottomMargin" id="oNP-As-Toa"/>
+                                        <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="HaY-ed-qfV" secondAttribute="bottom" id="oNP-As-Toa"/>
                                         <constraint firstItem="HaY-ed-qfV" firstAttribute="bottom" secondItem="8cV-e2-FU1" secondAttribute="bottomMargin" priority="750" id="uGQ-kB-h5U"/>
                                         <constraint firstItem="s7x-GC-Upd" firstAttribute="leading" secondItem="mbh-94-JdG" secondAttribute="trailing" constant="20" id="yUt-zP-SnR"/>
                                         <constraint firstItem="s7x-GC-Upd" firstAttribute="trailing" secondItem="8cV-e2-FU1" secondAttribute="trailingMargin" id="z30-uP-Nb1"/>

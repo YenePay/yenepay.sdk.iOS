@@ -91,10 +91,14 @@ class CartContentsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete && (indexPath.section == 0) {
             ShoppingCart.shared.removeAllItems(withId: ShoppingCart.shared.items[indexPath.row].item.id)
-            tableView.performBatchUpdates({
-                tableView.reloadRows(at: [IndexPath(row: 0, section: 1)], with: .automatic)
-                tableView.deleteRows(at: [indexPath], with: .automatic)
-            }, completion: nil)
+            if ShoppingCart.shared.items.count > 0 {
+                tableView.performBatchUpdates({
+                    tableView.reloadRows(at: [IndexPath(row: 0, section: 1)], with: .automatic)
+                    tableView.deleteRows(at: [indexPath], with: .automatic)
+                }, completion: nil)
+            } else {
+                tableView.reloadData()
+            }
         }
     }
     

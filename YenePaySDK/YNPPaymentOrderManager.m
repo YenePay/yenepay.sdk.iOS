@@ -39,13 +39,36 @@ NSString *const YNPPaymentResponseUserInfoKey = @"YNPPaymentResponse";
 
 typedef void(^YNPPaymentCompletionHandler_t)(YNPPaymentResponse *__nullable response, NSError *__nullable error);
 
+
+
+@interface YNPPaymentOrderInfo : NSObject
+
+@property (nonatomic, strong, readonly) YNPPaymentOrder *paymentOrder;
+@property (nonatomic, strong, readonly) YNPPaymentCompletionHandler_t completionHandler;
+
+@end
+
+@implementation YNPPaymentOrderInfo
+
+- (instancetype)initWithPayment:(YNPPaymentOrder *)paymentOrder handler:(YNPPaymentCompletionHandler_t)handler {
+    self = [super init];
+    if (self) {
+        _paymentOrder = paymentOrder;
+        _completionHandler = handler;
+    }
+    return self;
+}
+
+@end
+
+
+
 @interface YNPPaymentOrderManager()
 
 @property (nonatomic, readonly, nonnull) NSString *checkoutEndpoint;
+@property (nonatomic, readonly, nonnull) NSMutableDictionary<NSString*, YNPPaymentOrderInfo*> *paymentInfos;
 
-@property (nonatomic, readonly) BOOL isCheckoutInProgress;
-@property (nonatomic, copy, nullable) YNPPaymentOrder *paymentOrder;
-@property (nonatomic, strong, nullable) YNPPaymentCompletionHandler_t paymentCompletionHandler;
+- (BOOL)isCheckoutInProgressForOrderId:(NSString *)orderId;
 
 @end
 
@@ -61,42 +84,32 @@ typedef void(^YNPPaymentCompletionHandler_t)(YNPPaymentResponse *__nullable resp
     return sharedInstance;
 }
 
-// TODO: Handle cases where the app returns to foreground without being launched via the return url
 - (BOOL)handleOpenUrl:(NSURL *)url {
     if (![self canHandleUrl:url.absoluteString]) return NO;
     
     YNPPaymentResponse *response = [YNPUrlUtils parsePaymentResponseUrl:url];
     if (response == nil) {
-        if (self.isCheckoutInProgress) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                NSString *errorDesc = NSLocalizedString(@"Unable to complete payment.", nil);
-                NSString *errorDebugDesc = @"Unable to parse response";
-                NSDictionary *userInfo = @{
-                    NSLocalizedDescriptionKey: errorDesc,
-                    NSDebugDescriptionErrorKey: errorDebugDesc
-                };
-                NSError *error = [NSError errorWithDomain:YNPPaymentErrorDomain
-                                                     code:YNPPaymentErrorUnknown
-                                                 userInfo:userInfo];
-                [self finishCheckoutWithResponse:nil error:error];
-            });
-        }
+        NSLog(@"[YNPPaymentOrderManager] ** Failed to parse response url: %@", url.absoluteString);
         return NO;
     }
     
 // TODO: verify response before going any further
     
-    if (self.isCheckoutInProgress) {
+    if (response.merchantOrderId && [self isCheckoutInProgressForOrderId:response.merchantOrderId]) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self finishCheckoutWithResponse:response error:nil];
+            [self finishCheckoutWithOrderId:response.merchantOrderId response:response error:nil];
         });
-    } else {
-        if (response.isPaymentCompleted) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self postPaymentCompletedNotificationWithResponse:response];
-            });
-        }
     }
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if ([self.delegate respondsToSelector:@selector(paymentOrderManager:didReceivePaymentResponse:)]) {
+            [self.delegate paymentOrderManager:self didReceivePaymentResponse:response];
+        }
+        
+        if (response.isPaymentCompleted) {
+            [self postPaymentCompletedNotificationWithResponse:response];
+        }
+    });
     
     return YES;
 }
@@ -104,11 +117,11 @@ typedef void(^YNPPaymentCompletionHandler_t)(YNPPaymentResponse *__nullable resp
 - (void)checkoutWithPaymentOrder:(YNPPaymentOrder *)paymentOrder
         paymentCompletionHandler:(void(^)(YNPPaymentResponse *response, NSError *error))completionHandler {
     
-    if (self.isCheckoutInProgress) {
+    if ([self isCheckoutInProgressForOrderId:paymentOrder.merchantOrderId]) {
         if (completionHandler) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 NSString *errorDesc = NSLocalizedString(@"A previous checkout flow is still in progress.", nil);
-                NSString *errorDebugDesc = @"A previous checkout flow is still in progress.";
+                NSString *errorDebugDesc = @"A previous checkout flow with the same merchantOrderId is still in progress.";
                 NSDictionary *userInfo = @{
                     NSLocalizedDescriptionKey : errorDesc,
                     NSDebugDescriptionErrorKey: errorDebugDesc
@@ -120,23 +133,22 @@ typedef void(^YNPPaymentCompletionHandler_t)(YNPPaymentResponse *__nullable resp
         }
         return;
     } // else...
-                
-    self.paymentCompletionHandler = completionHandler;
-    self.paymentOrder = paymentOrder;
-    self.paymentOrder.merchantCode = self.merchantCode;
-    self.paymentOrder.ipnUrl = self.ipnUrl;
-    self.paymentOrder.returnUrl = self.returnUrl;
-        
-    PaymentOrderValidationResult *validationResult = [YNPPaymentOrderManager validatePaymentOrder:self.paymentOrder];
+    
+    YNPPaymentOrder *payment = [paymentOrder copy];
+    payment.merchantCode = self.merchantCode;
+    payment.ipnUrl = self.ipnUrl;
+    payment.returnUrl = self.returnUrl;
+    self.paymentInfos[payment.merchantOrderId] = [[YNPPaymentOrderInfo alloc] initWithPayment:payment handler:completionHandler];
+    
+    PaymentOrderValidationResult *validationResult = [YNPPaymentOrderManager validatePaymentOrder:payment];
     if (!validationResult.isValid) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self finishCheckoutWithResponse:nil error:validationResult.error];
+            [self finishCheckoutWithOrderId:payment.merchantOrderId response:nil error:validationResult.error];
         });
         return;
     } // else...
         
-    NSURL *checkoutUrl = [YNPUrlUtils checkoutUrlForPaymentOrder:self.paymentOrder
-                                                        endpoint:self.checkoutEndpoint];
+    NSURL *checkoutUrl = [YNPUrlUtils checkoutUrlForPaymentOrder:payment endpoint:self.checkoutEndpoint];
 #if DEBUG
     NSLog(@"[YNPPaymentOrderManager] Checkout Url (len = %d) = %@", (int)checkoutUrl.absoluteString.length, checkoutUrl);
 #endif
@@ -152,7 +164,7 @@ typedef void(^YNPPaymentCompletionHandler_t)(YNPPaymentResponse *__nullable resp
             NSError *error = [NSError errorWithDomain:YNPPaymentErrorDomain
                                                  code:YNPPaymentErrorUnknown
                                              userInfo:userInfo];
-            [self finishCheckoutWithResponse:nil error:error];
+            [self finishCheckoutWithOrderId:payment.merchantOrderId response:nil error:error];
         });
         return;
     } // else...
@@ -169,12 +181,20 @@ typedef void(^YNPPaymentCompletionHandler_t)(YNPPaymentResponse *__nullable resp
             NSError *error = [NSError errorWithDomain:YNPPaymentErrorDomain
                                                  code:YNPPaymentErrorUnknown
                                              userInfo:userInfo];
-            [self finishCheckoutWithResponse:nil error:error];
+            [self finishCheckoutWithOrderId:payment.merchantOrderId response:nil error:error];
             return;
         }
     }];
 }
 
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        _paymentInfos = [NSMutableDictionary dictionary];
+    }
+    return self;
+}
 
 
 - (NSString *)checkoutEndpoint {
@@ -186,30 +206,19 @@ typedef void(^YNPPaymentCompletionHandler_t)(YNPPaymentResponse *__nullable resp
 }
 
 
-- (BOOL)isCheckoutInProgress {
-    return self.paymentOrder != nil;
+- (BOOL)isCheckoutInProgressForOrderId:(NSString *)orderId {
+    return self.paymentInfos[orderId] != nil;
 }
 
 - (BOOL)canHandleUrl:(NSString *)url {
-    if (self.paymentOrder.returnUrl &&
-        [YNPPaymentOrderManager url:url matchesReturnUrl:self.paymentOrder.returnUrl]) {
-        return YES;
-    } else if (self.returnUrl &&
-               [YNPPaymentOrderManager url:url matchesReturnUrl:self.returnUrl]) {
-        return YES;
-    } else {    
-        return NO;
-    }
+    return self.returnUrl && [YNPPaymentOrderManager url:url matchesReturnUrl:self.returnUrl];
 }
 
-- (void)finishCheckoutWithResponse:(YNPPaymentResponse *)response error:(NSError *)error {
-    YNPPaymentCompletionHandler_t completionHandler = self.paymentCompletionHandler;
+- (void)finishCheckoutWithOrderId:(NSString *)orderId response:(YNPPaymentResponse *)response error:(NSError *)error {
+    YNPPaymentOrderInfo *info = self.paymentInfos[orderId];
+    [self.paymentInfos removeObjectForKey:orderId];
     
-    self.paymentOrder = nil;
-    self.paymentCompletionHandler = nil;
-    
-    if (completionHandler) completionHandler(response, error);
-    if (response.isPaymentCompleted) [self postPaymentCompletedNotificationWithResponse:response];
+    if (info.completionHandler) info.completionHandler(response, error);
 }
 
 - (void)postPaymentCompletedNotificationWithResponse:(YNPPaymentResponse *)response {

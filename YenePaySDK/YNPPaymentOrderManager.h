@@ -12,6 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol YNPPaymentOrderManagerDelegate;
 
 @interface YNPPaymentOrderManager : NSObject
 
@@ -20,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, nullable) NSString *ipnUrl;
 @property (nonatomic, copy, nullable) NSString *returnUrl;
 
+@property (nonatomic, weak, nullable) id<YNPPaymentOrderManagerDelegate> delegate;
 
 + (instancetype)sharedInstance;
 
@@ -29,6 +31,16 @@ NS_ASSUME_NONNULL_BEGIN
         paymentCompletionHandler:(void(^)(YNPPaymentResponse *__nullable response, NSError *__nullable error))completionHandler;
 
 @end
+
+
+@protocol YNPPaymentOrderManagerDelegate <NSObject>
+
+@optional
+- (void)paymentOrderManager:(YNPPaymentOrderManager *)paymentManager
+  didReceivePaymentResponse:(YNPPaymentResponse *)paymentResponse;
+
+@end
+
 
 FOUNDATION_EXTERN NSNotificationName const YNPPaymentCompletedNotification;
 FOUNDATION_EXTERN NSString *const YNPPaymentResponseUserInfoKey;
