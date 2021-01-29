@@ -66,6 +66,11 @@ static NSString * const kUrlParamKeyErrorMsg = @"ErrorMsg";
     addQueryKeyValue(kUrlParamKeySuccessUrl, paymentOrder.returnUrl);
     addQueryKeyValue(kUrlParamKeyCancelUrl, paymentOrder.returnUrl);
     addQueryKeyValue(kUrlParamKeyFailureUrl, paymentOrder.returnUrl);
+    addQueryKeyValue(kUrlParamKeyDiscount, formatAmount(paymentOrder.discount));
+    addQueryKeyValue(kUrlParamKeyTax1, formatAmount(paymentOrder.tax1));
+    addQueryKeyValue(kUrlParamKeyTax2, formatAmount(paymentOrder.tax2));
+    addQueryKeyValue(kUrlParamKeyHandlingFee, formatAmount(paymentOrder.handlingFee));
+    addQueryKeyValue(kUrlParamKeyDeliveryFee, formatAmount(paymentOrder.deliveryFee));
     
     addQueryKeyValue(kUrlParamKeyMerchantOrderId, paymentOrder.merchantOrderId);
     if (paymentOrder.paymentProcess == YNPPaymentProcessTypeCart) {
@@ -75,23 +80,12 @@ static NSString * const kUrlParamKeyErrorMsg = @"ErrorMsg";
     }
 
     if (paymentOrder.isExpress) {
-        addQueryKeyValue(kUrlParamKeyDiscount, formatAmount(paymentOrder.discount));
-        addQueryKeyValue(kUrlParamKeyTax1, formatAmount(paymentOrder.tax1));
-        addQueryKeyValue(kUrlParamKeyTax2, formatAmount(paymentOrder.tax2));
-        addQueryKeyValue(kUrlParamKeyHandlingFee, formatAmount(paymentOrder.handlingFee));
-        addQueryKeyValue(kUrlParamKeyDeliveryFee, formatAmount(paymentOrder.deliveryFee));
-
         YNPOrderedItem *item = paymentOrder.items.firstObject;
         addQueryKeyValue(kUrlParamKeyItemId, item.itemId);
         addQueryKeyValue(kUrlParamKeyItemName, item.itemName);
         addQueryKeyValue(kUrlParamKeyQuantity, formatQuantity(item.quantity));
         addQueryKeyValue(kUrlParamKeyUnitPrice, formatAmount(item.unitPrice));
     } else {
-        addQueryKeyValue([@"TotalItems" stringByAppendingString:kUrlParamKeyDiscount], formatAmount(paymentOrder.discount));
-        addQueryKeyValue([@"TotalItems" stringByAppendingString:kUrlParamKeyTax1], formatAmount(paymentOrder.tax1));
-        addQueryKeyValue([@"TotalItems" stringByAppendingString:kUrlParamKeyTax2], formatAmount(paymentOrder.tax2));
-        addQueryKeyValue([@"TotalItems" stringByAppendingString:kUrlParamKeyHandlingFee], formatAmount(paymentOrder.handlingFee));
-        addQueryKeyValue([@"TotalItems" stringByAppendingString:kUrlParamKeyDeliveryFee], formatAmount(paymentOrder.deliveryFee));
 
         for (int index = 0; index < paymentOrder.items.count; index++) {
             NSString* (^indexedKey)(NSString*) = ^ NSString* (NSString *key) {
