@@ -24,7 +24,7 @@ static NSString * const kUrlParamKeyTax2 = @"Tax2";
 static NSString * const kUrlParamKeyItems = @"Items";
 static NSString * const kUrlParamKeyDiscount = @"Discount";
 static NSString * const kUrlParamKeyHandlingFee = @"HandlingFee";
-static NSString * const kUrlParamKeyShippingFee = @"DeliveryFee";
+static NSString * const kUrlParamKeyDeliveryFee = @"DeliveryFee";
 static NSString * const kUrlParamKeyCancelUrl = @"CancelUrl";
 static NSString * const kUrlParamKeySuccessUrl = @"SuccessUrl";
 static NSString * const kUrlParamKeyFailureUrl = @"FailureUrl";
@@ -79,7 +79,7 @@ static NSString * const kUrlParamKeyErrorMsg = @"ErrorMsg";
         addQueryKeyValue(kUrlParamKeyTax1, formatAmount(paymentOrder.tax1));
         addQueryKeyValue(kUrlParamKeyTax2, formatAmount(paymentOrder.tax2));
         addQueryKeyValue(kUrlParamKeyHandlingFee, formatAmount(paymentOrder.handlingFee));
-        addQueryKeyValue(kUrlParamKeyShippingFee, formatAmount(paymentOrder.deliveryFee));
+        addQueryKeyValue(kUrlParamKeyDeliveryFee, formatAmount(paymentOrder.deliveryFee));
 
         YNPOrderedItem *item = paymentOrder.items.firstObject;
         addQueryKeyValue(kUrlParamKeyItemId, item.itemId);
@@ -91,7 +91,7 @@ static NSString * const kUrlParamKeyErrorMsg = @"ErrorMsg";
         addQueryKeyValue([@"TotalItems" stringByAppendingString:kUrlParamKeyTax1], formatAmount(paymentOrder.tax1));
         addQueryKeyValue([@"TotalItems" stringByAppendingString:kUrlParamKeyTax2], formatAmount(paymentOrder.tax2));
         addQueryKeyValue([@"TotalItems" stringByAppendingString:kUrlParamKeyHandlingFee], formatAmount(paymentOrder.handlingFee));
-        addQueryKeyValue([@"TotalItems" stringByAppendingString:kUrlParamKeyShippingFee], formatAmount(paymentOrder.deliveryFee));
+        addQueryKeyValue([@"TotalItems" stringByAppendingString:kUrlParamKeyDeliveryFee], formatAmount(paymentOrder.deliveryFee));
 
         for (int index = 0; index < paymentOrder.items.count; index++) {
             NSString* (^indexedKey)(NSString*) = ^ NSString* (NSString *key) {
