@@ -1,0 +1,16 @@
+PODS:
+  - YenePay (0.1.0)
+
+DEPENDENCIES:
+  - YenePay (from `../`)
+
+EXTERNAL SOURCES:
+  YenePay:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  YenePay: 966b5b96a7364e9ca84c181c54905689ceacdb6c
+
+PODFILE CHECKSUM: 16e0e67e33577670feb793a8bebf77d0c2c101ec
+
+COCOAPODS: 1.9.3

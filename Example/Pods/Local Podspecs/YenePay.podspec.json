@@ -1,0 +1,23 @@
+{
+  "name": "YenePay",
+  "version": "0.1.0",
+  "summary": "YenePay SDK for iOS.",
+  "description": "\"YenePay SDK for iOS will let you connect your app with YenePay to start accepting payments.\"",
+  "homepage": "https://github.com/YenePay",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "ahmed": "ahmed.mohammed@yenepay.com"
+  },
+  "source": {
+    "git": "https://github.com/YenePay.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "YenePay/Classes/*",
+  "public_header_files": "YenePay/Classes/**/*.h"
+}

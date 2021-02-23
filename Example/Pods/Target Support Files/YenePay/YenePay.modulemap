@@ -1,0 +1,6 @@
+framework module YenePay {
+  umbrella header "YenePay-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'YenePay_Example' do
+  pod 'YenePay', :path => '../'
+
+  target 'YenePay_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
