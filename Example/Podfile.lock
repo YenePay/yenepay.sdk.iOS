@@ -1,5 +1,5 @@
 PODS:
-  - YenePay (1.0.0)
+  - YenePay (1.0.1)
 
 DEPENDENCIES:
   - YenePay (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  YenePay: 8bdc652f3f607cc84844a6efa22f622be73884ac
+  YenePay: 406938258e615e4e1f3b2f4ebc8b9c2d38aede77
 
 PODFILE CHECKSUM: 16e0e67e33577670feb793a8bebf77d0c2c101ec
 

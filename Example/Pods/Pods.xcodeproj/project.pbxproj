@@ -8,90 +8,96 @@
 
 /* Begin PBXBuildFile section */
 		0119FB56BE321C98F21244EDB97F376E /* Pods-YenePay_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E69680D72EA21E55EBE1F2089D183FCA /* Pods-YenePay_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0E8298E411BA27BB54D9D6F46AE9C0FC /* YNPOrderedItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A1104FE323EB3EB3420364CA958C4F3 /* YNPOrderedItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		119DB98B79F60341BF6A55A449DB981E /* YNPErrorCodes.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD73B191043FD013B027D4B4E83D326 /* YNPErrorCodes.m */; };
-		1B3AA4F7F208C3A3C9FC2DF15FD85CB8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		27429ADA538EFB8DAA0366AAF9E874A1 /* YNPPaymentOrder.h in Headers */ = {isa = PBXBuildFile; fileRef = 0597830BD9ACE859439DB9CC44E9126F /* YNPPaymentOrder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4DB680C94D80D1AEE16CBDEB7A05B896 /* YNPPaymentResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = BCEDABA0DF022912F93290F4292026A4 /* YNPPaymentResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		069863EB36C9105F739E84652F7E33E3 /* YNPPaymentResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 09365AEBF718BB31DAAD7C061F4DAA66 /* YNPPaymentResponse.m */; };
+		1A0D5B2387FF006FA5E20602C133B7E1 /* YNPOrderedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B4BFEE9F6C7466EB8F8E5730D944C7 /* YNPOrderedItem.m */; };
+		1C7D38367AA7A6F7A5921B35A5ED6AC4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		1D4E98CF84D0D9E06B1FF61390C655A9 /* YenePay-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A20C4047757BFBA7DAF9815DB7ADD1E /* YenePay-dummy.m */; };
+		25E4C464F622CB785A848F4EBC39A6DF /* YNPPaymentOrderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5631562F021F33EA81FA88B2E323C90B /* YNPPaymentOrderManager.m */; };
+		334ED3CAC68B542635F51706C2F3AC8D /* YNPPaymentOrder_internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 04F1F01040A3F0D4148ECBEBD63A91A4 /* YNPPaymentOrder_internal.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		49379766DFDB08F5C42C902531070390 /* YenePay.h in Headers */ = {isa = PBXBuildFile; fileRef = E917CDFBE4B9A9A75ED87FD75790CE9B /* YenePay.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		57ED2454D22FF41C497C351FB4CC3946 /* YNPPaymentOrderManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A3E4AA55E25ED12B0008B979ED8ECD13 /* YNPPaymentOrderManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5907AADF8D20ECA022AD7BFC90EDC0F5 /* YNPPaymentOrder.h in Headers */ = {isa = PBXBuildFile; fileRef = 34065875AB43F1A4AEEB5AB90589E0A7 /* YNPPaymentOrder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5CAA47DBF907E3794CD77FB293B0BAEA /* Pods-YenePay_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A485F3E05BFB9BC8F63A03E75FD6DD4 /* Pods-YenePay_Example-dummy.m */; };
-		660996860802BA8426A6A8362473E151 /* YNPPaymentOrderManager.h in Headers */ = {isa = PBXBuildFile; fileRef = CA3B0F96D6D5717F31E8D4CF5274A69E /* YNPPaymentOrderManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		71D29735189448C4180FBE3CFAC9740F /* YNPOrderedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E42006057A71B6BDA93EE3E278F46682 /* YNPOrderedItem.m */; };
-		7EAAED9044C899213FB9E8F1EADCC6A8 /* YenePay-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC65282B920545D9B85F1A5589A1E59 /* YenePay-dummy.m */; };
-		85B8F61D57C5664DE7BA8056EEEC3079 /* YNPPaymentOrderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 503D2CEAD980504DAACFAC76EF7B568E /* YNPPaymentOrderManager.m */; };
-		8929780E9C585A0692174F8252A3384D /* YNPPaymentResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D2A35F9CFCF7134D9BD8CC5873BF62 /* YNPPaymentResponse.m */; };
+		631336D1C214A980155E3C3901F8CB24 /* YNPOrderedItem.h in Headers */ = {isa = PBXBuildFile; fileRef = E08227D88385B61D343E97538D2BAA3A /* YNPOrderedItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		683E32759FC3F8C208E46B11B5689634 /* YNPErrorCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C111470214F4CA7D4BD63B8F5BACC2D /* YNPErrorCodes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		90985225E5972D2ED427403112AFB541 /* YNPPaymentOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 15F37454B4FF25E59AABE202187D4FCD /* YNPPaymentOrder.m */; };
 		90CD88E915657E42E33376C66DAE7428 /* Pods-YenePay_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8908BD3E0851E296F8E8BBFA589C98D5 /* Pods-YenePay_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A962B69811D33934F7A8C7776F5F13F7 /* YNPUrlUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1A7F535C343E6E3E50B92A82FB9D69 /* YNPUrlUtils.m */; };
 		AD0E91D83BDC5FC7344A02CF93AEF20B /* Pods-YenePay_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C7A71777F6BD8952F9B4E8D240872C /* Pods-YenePay_Tests-dummy.m */; };
-		C6C3A72B3322E365C85C5A4660DF7E23 /* YNPPaymentOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A4946A2D0093189890A917F781E64F /* YNPPaymentOrder.m */; };
+		B28B13042BDD7C35F22C9CEAADFA999A /* YNPErrorCodes.m in Sources */ = {isa = PBXBuildFile; fileRef = F2093B7657A4CCF753E323A249612D96 /* YNPErrorCodes.m */; };
+		C3B47F34CBD9760FDDAC554416EE82E6 /* YNPPaymentResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E8B6F5092DAD68572EA318B3765DA49 /* YNPPaymentResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D103E7871A1BDF2714B9DABBFAF5F2F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		DE5E074FABA14EA0E5E892FFDE67C68C /* YNPErrorCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = C675404469AD1EFC78E607AD2F8F3E36 /* YNPErrorCodes.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E5DA38D82CBE291735A1A63408A969A2 /* YenePay-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 63BCD11610B65ED1185F3B3FE7ACFD47 /* YenePay-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E983890CE6431A77005EEA5A68E0BE7B /* YenePay.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C59EBABA41D4254EA2D758167F3C61E /* YenePay.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5E620A3115D4A81E288081494864CC0 /* YNPPaymentResponse_internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 3421B9DC80E6BC4F5E225E39EF23DEFC /* YNPPaymentResponse_internal.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		EB87D1909F04F9A4C5F4C4B23FE82409 /* YenePay-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 502BA1EA37768D610EB6CACAAB045B34 /* YenePay-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F68CCDABD0BE65365E76FBD8076F02C4 /* YNPUrlUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A5EBCD6BF334B6560C3893E5D3D1E6 /* YNPUrlUtils.m */; };
+		F71056EA19791AB3EFDACB18FF7FD8DA /* YNPUrlUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E847FB4780E5054C4B75C3F12F9BEEA /* YNPUrlUtils.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F9E422BDB15D4117C7021F390C25D7EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		03F417AB78A8784562B4F694D4DA7D24 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B85EE4AAE735228E6778A3D1C68A7843;
-			remoteInfo = YenePay;
-		};
-		5A575AD2B936563431B650F81B9B5342 /* PBXContainerItemProxy */ = {
+		8027DF31D5232583679A042B1C7F18E9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2F791683172684C86C747DD81AE684B7;
 			remoteInfo = "Pods-YenePay_Example";
 		};
+		A891C707367D64E7724919390877E671 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B85EE4AAE735228E6778A3D1C68A7843;
+			remoteInfo = YenePay;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		01D6C566BB77C49D006B9C94183812C7 /* Pods_YenePay_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_YenePay_Tests.framework; path = "Pods-YenePay_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0597830BD9ACE859439DB9CC44E9126F /* YNPPaymentOrder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YNPPaymentOrder.h; path = YenePay/Classes/YNPPaymentOrder.h; sourceTree = "<group>"; };
-		0A1104FE323EB3EB3420364CA958C4F3 /* YNPOrderedItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YNPOrderedItem.h; path = YenePay/Classes/YNPOrderedItem.h; sourceTree = "<group>"; };
+		04F1F01040A3F0D4148ECBEBD63A91A4 /* YNPPaymentOrder_internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YNPPaymentOrder_internal.h; sourceTree = "<group>"; };
+		09365AEBF718BB31DAAD7C061F4DAA66 /* YNPPaymentResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YNPPaymentResponse.m; sourceTree = "<group>"; };
 		0A485F3E05BFB9BC8F63A03E75FD6DD4 /* Pods-YenePay_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-YenePay_Example-dummy.m"; sourceTree = "<group>"; };
+		1361B091E587181559F3E40A2344BECF /* YenePay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YenePay.debug.xcconfig; sourceTree = "<group>"; };
+		15F37454B4FF25E59AABE202187D4FCD /* YNPPaymentOrder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YNPPaymentOrder.m; sourceTree = "<group>"; };
 		206D45DB8275C2C78EDE514250FFD956 /* Pods-YenePay_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YenePay_Example.release.xcconfig"; sourceTree = "<group>"; };
 		20713BFA4629C8E964D59D0E1923C0FD /* Pods-YenePay_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YenePay_Example-frameworks.sh"; sourceTree = "<group>"; };
-		2532557AA981A6B10BD929EBDF23245E /* YenePay.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = YenePay.modulemap; sourceTree = "<group>"; };
-		29D2A35F9CFCF7134D9BD8CC5873BF62 /* YNPPaymentResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YNPPaymentResponse.m; path = YenePay/Classes/YNPPaymentResponse.m; sourceTree = "<group>"; };
-		2EC65282B920545D9B85F1A5589A1E59 /* YenePay-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YenePay-dummy.m"; sourceTree = "<group>"; };
-		2EF071F87490075D02043301C0E4DB12 /* YenePay-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YenePay-prefix.pch"; sourceTree = "<group>"; };
+		20B4BFEE9F6C7466EB8F8E5730D944C7 /* YNPOrderedItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YNPOrderedItem.m; sourceTree = "<group>"; };
+		2A20C4047757BFBA7DAF9815DB7ADD1E /* YenePay-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YenePay-dummy.m"; sourceTree = "<group>"; };
+		34065875AB43F1A4AEEB5AB90589E0A7 /* YNPPaymentOrder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YNPPaymentOrder.h; sourceTree = "<group>"; };
+		3421B9DC80E6BC4F5E225E39EF23DEFC /* YNPPaymentResponse_internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YNPPaymentResponse_internal.h; sourceTree = "<group>"; };
+		35A5EBCD6BF334B6560C3893E5D3D1E6 /* YNPUrlUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YNPUrlUtils.m; sourceTree = "<group>"; };
 		37905C55016CB9F512EEDB8DEDAC404E /* Pods-YenePay_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YenePay_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		3D3B7124457975BB4C548D0D50F8B7E5 /* YenePay-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "YenePay-Info.plist"; sourceTree = "<group>"; };
+		3E8B6F5092DAD68572EA318B3765DA49 /* YNPPaymentResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YNPPaymentResponse.h; sourceTree = "<group>"; };
 		44A5DF74D95E18BC09B3DDD4248A3269 /* Pods-YenePay_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-YenePay_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		47DED2366547F3F2139B09C8C14C7C1C /* Pods-YenePay_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YenePay_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		503D2CEAD980504DAACFAC76EF7B568E /* YNPPaymentOrderManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YNPPaymentOrderManager.m; path = YenePay/Classes/YNPPaymentOrderManager.m; sourceTree = "<group>"; };
+		4C111470214F4CA7D4BD63B8F5BACC2D /* YNPErrorCodes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YNPErrorCodes.h; sourceTree = "<group>"; };
+		502BA1EA37768D610EB6CACAAB045B34 /* YenePay-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YenePay-umbrella.h"; sourceTree = "<group>"; };
 		554CBB895C3D87CC02E01FD1A80538AF /* Pods-YenePay_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YenePay_Tests-Info.plist"; sourceTree = "<group>"; };
+		5631562F021F33EA81FA88B2E323C90B /* YNPPaymentOrderManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YNPPaymentOrderManager.m; sourceTree = "<group>"; };
 		618B793B8B1E7A2AF9D61987CCDFAC61 /* Pods-YenePay_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-YenePay_Tests.modulemap"; sourceTree = "<group>"; };
-		63BCD11610B65ED1185F3B3FE7ACFD47 /* YenePay-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YenePay-umbrella.h"; sourceTree = "<group>"; };
+		6E8E50322FBD6EA6F5280B1DBB2E3AE0 /* YenePay.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = YenePay.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		73E2FEE48998E388B052B6BB5A62D222 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		76007EE693E8F39CB6F6DBD4FFAF84B7 /* Pods-YenePay_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-YenePay_Example.modulemap"; sourceTree = "<group>"; };
-		7F1A7F535C343E6E3E50B92A82FB9D69 /* YNPUrlUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YNPUrlUtils.m; path = YenePay/Classes/YNPUrlUtils.m; sourceTree = "<group>"; };
-		83A4946A2D0093189890A917F781E64F /* YNPPaymentOrder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YNPPaymentOrder.m; path = YenePay/Classes/YNPPaymentOrder.m; sourceTree = "<group>"; };
 		8858527E58E83AAAD855BB3FAE62222C /* Pods-YenePay_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-YenePay_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8908BD3E0851E296F8E8BBFA589C98D5 /* Pods-YenePay_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-YenePay_Example-umbrella.h"; sourceTree = "<group>"; };
-		8C59EBABA41D4254EA2D758167F3C61E /* YenePay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YenePay.h; path = YenePay/Classes/YenePay.h; sourceTree = "<group>"; };
-		93FA92D5FDD2EFC4161BE751C05EB65F /* YenePay.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = YenePay.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		96D5C3528AFD5A189BFD40DA664FA810 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		8E847FB4780E5054C4B75C3F12F9BEEA /* YNPUrlUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YNPUrlUtils.h; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A3E4AA55E25ED12B0008B979ED8ECD13 /* YNPPaymentOrderManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YNPPaymentOrderManager.h; sourceTree = "<group>"; };
 		A4B35F4893180A36B6C68F98CE68216E /* Pods-YenePay_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YenePay_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		AF02AB68F7D864493DF6F84DCD39B7EF /* Pods-YenePay_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YenePay_Example-Info.plist"; sourceTree = "<group>"; };
+		B174AE3B8A77FE6D4468CEA6D5012B3F /* YenePay.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = YenePay.modulemap; sourceTree = "<group>"; };
 		B7C7A71777F6BD8952F9B4E8D240872C /* Pods-YenePay_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-YenePay_Tests-dummy.m"; sourceTree = "<group>"; };
-		BCEDABA0DF022912F93290F4292026A4 /* YNPPaymentResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YNPPaymentResponse.h; path = YenePay/Classes/YNPPaymentResponse.h; sourceTree = "<group>"; };
+		BAFF8310E715AB5DD68BBE9F4EDFC9B4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		BCB7F5112BDD0CE014AE287A098E12C7 /* YenePay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YenePay.release.xcconfig; sourceTree = "<group>"; };
 		BE450E30CE437CCCB27AA98A929601A6 /* YenePay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = YenePay.framework; path = YenePay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C675404469AD1EFC78E607AD2F8F3E36 /* YNPErrorCodes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YNPErrorCodes.h; path = YenePay/Classes/YNPErrorCodes.h; sourceTree = "<group>"; };
-		C77F4AFBDD60746188FB5F82A4503516 /* YenePay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YenePay.release.xcconfig; sourceTree = "<group>"; };
-		CA3B0F96D6D5717F31E8D4CF5274A69E /* YNPPaymentOrderManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YNPPaymentOrderManager.h; path = YenePay/Classes/YNPPaymentOrderManager.h; sourceTree = "<group>"; };
-		CDD73B191043FD013B027D4B4E83D326 /* YNPErrorCodes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YNPErrorCodes.m; path = YenePay/Classes/YNPErrorCodes.m; sourceTree = "<group>"; };
+		C1BB471988A44A9BB2AEFFEBFB058A7D /* YenePay-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "YenePay-Info.plist"; sourceTree = "<group>"; };
 		CEE2850DE4E48690F58A1E95033CF4B5 /* Pods-YenePay_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YenePay_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D965A6F99BCA0FB6BEDBE3BAA8DD312E /* Pods-YenePay_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YenePay_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		E42006057A71B6BDA93EE3E278F46682 /* YNPOrderedItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YNPOrderedItem.m; path = YenePay/Classes/YNPOrderedItem.m; sourceTree = "<group>"; };
+		E08227D88385B61D343E97538D2BAA3A /* YNPOrderedItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YNPOrderedItem.h; sourceTree = "<group>"; };
 		E69680D72EA21E55EBE1F2089D183FCA /* Pods-YenePay_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-YenePay_Tests-umbrella.h"; sourceTree = "<group>"; };
-		F3972B56CC9F5CF894C455196E39723A /* YenePay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YenePay.debug.xcconfig; sourceTree = "<group>"; };
+		E917CDFBE4B9A9A75ED87FD75790CE9B /* YenePay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YenePay.h; sourceTree = "<group>"; };
+		EDA89D4B1C1DA3FCCD5F30435CD9A6C1 /* YenePay-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YenePay-prefix.pch"; sourceTree = "<group>"; };
+		F2093B7657A4CCF753E323A249612D96 /* YNPErrorCodes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YNPErrorCodes.m; sourceTree = "<group>"; };
 		F69163E0C9A32F0050F98A9B71570E36 /* Pods_YenePay_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_YenePay_Example.framework; path = "Pods-YenePay_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC61EDDF610A10B3B0D8B627E4CB0C46 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,11 +109,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8BF4ACB03E472BEBD62EA54EEC5DFBC5 /* Frameworks */ = {
+		8CD2544C60688696FEB69C934137E6A0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B3AA4F7F208C3A3C9FC2DF15FD85CB8 /* Foundation.framework in Frameworks */,
+				1C7D38367AA7A6F7A5921B35A5ED6AC4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,14 +128,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		191F8F61864478DCFB2417D04926B938 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6D9D83DBFA767FCD551A64CD4EBB81C0 /* YenePay */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 		52D4FCA9DF78E8FBD29EBAC5D9CDF6D4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,28 +162,6 @@
 			path = "Target Support Files/Pods-YenePay_Tests";
 			sourceTree = "<group>";
 		};
-		6D9D83DBFA767FCD551A64CD4EBB81C0 /* YenePay */ = {
-			isa = PBXGroup;
-			children = (
-				8C59EBABA41D4254EA2D758167F3C61E /* YenePay.h */,
-				C675404469AD1EFC78E607AD2F8F3E36 /* YNPErrorCodes.h */,
-				CDD73B191043FD013B027D4B4E83D326 /* YNPErrorCodes.m */,
-				0A1104FE323EB3EB3420364CA958C4F3 /* YNPOrderedItem.h */,
-				E42006057A71B6BDA93EE3E278F46682 /* YNPOrderedItem.m */,
-				0597830BD9ACE859439DB9CC44E9126F /* YNPPaymentOrder.h */,
-				83A4946A2D0093189890A917F781E64F /* YNPPaymentOrder.m */,
-				CA3B0F96D6D5717F31E8D4CF5274A69E /* YNPPaymentOrderManager.h */,
-				503D2CEAD980504DAACFAC76EF7B568E /* YNPPaymentOrderManager.m */,
-				BCEDABA0DF022912F93290F4292026A4 /* YNPPaymentResponse.h */,
-				29D2A35F9CFCF7134D9BD8CC5873BF62 /* YNPPaymentResponse.m */,
-				7F1A7F535C343E6E3E50B92A82FB9D69 /* YNPUrlUtils.m */,
-				D389CB996EEBF49C319B0FF3E2A6B1DA /* Pod */,
-				C51479F52544852086750D3EEC8D796E /* Support Files */,
-			);
-			name = YenePay;
-			path = ../..;
-			sourceTree = "<group>";
-		};
 		8CA161E324CBBDBB20575972FE22B87A /* Pods-YenePay_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +179,47 @@
 			path = "Target Support Files/Pods-YenePay_Example";
 			sourceTree = "<group>";
 		};
+		8E2CBAAC3A91A1CA79A65C55D5EBF596 /* YenePay */ = {
+			isa = PBXGroup;
+			children = (
+				CD6C189CAEB2323FB6BFBE6E09381A80 /* Classes */,
+				A9EF743968F4FA16DFFE2589D94750FB /* Pod */,
+				C28526D2DFFE2444116225F55141D970 /* Private */,
+				CD89A017BE1D8FED46D44B2E62DCCCB7 /* Support Files */,
+			);
+			name = YenePay;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		A63543D320235FC7F92FCDC7C206FC25 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E2CBAAC3A91A1CA79A65C55D5EBF596 /* YenePay */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		A9EF743968F4FA16DFFE2589D94750FB /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				73E2FEE48998E388B052B6BB5A62D222 /* LICENSE */,
+				BAFF8310E715AB5DD68BBE9F4EDFC9B4 /* README.md */,
+				6E8E50322FBD6EA6F5280B1DBB2E3AE0 /* YenePay.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		C28526D2DFFE2444116225F55141D970 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				04F1F01040A3F0D4148ECBEBD63A91A4 /* YNPPaymentOrder_internal.h */,
+				3421B9DC80E6BC4F5E225E39EF23DEFC /* YNPPaymentResponse_internal.h */,
+				8E847FB4780E5054C4B75C3F12F9BEEA /* YNPUrlUtils.h */,
+			);
+			name = Private;
+			path = YenePay/Private;
+			sourceTree = "<group>";
+		};
 		C4457A1981D3317A62654A1499A586F5 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,16 +229,36 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		C51479F52544852086750D3EEC8D796E /* Support Files */ = {
+		CD6C189CAEB2323FB6BFBE6E09381A80 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				2532557AA981A6B10BD929EBDF23245E /* YenePay.modulemap */,
-				2EC65282B920545D9B85F1A5589A1E59 /* YenePay-dummy.m */,
-				3D3B7124457975BB4C548D0D50F8B7E5 /* YenePay-Info.plist */,
-				2EF071F87490075D02043301C0E4DB12 /* YenePay-prefix.pch */,
-				63BCD11610B65ED1185F3B3FE7ACFD47 /* YenePay-umbrella.h */,
-				F3972B56CC9F5CF894C455196E39723A /* YenePay.debug.xcconfig */,
-				C77F4AFBDD60746188FB5F82A4503516 /* YenePay.release.xcconfig */,
+				E917CDFBE4B9A9A75ED87FD75790CE9B /* YenePay.h */,
+				4C111470214F4CA7D4BD63B8F5BACC2D /* YNPErrorCodes.h */,
+				F2093B7657A4CCF753E323A249612D96 /* YNPErrorCodes.m */,
+				E08227D88385B61D343E97538D2BAA3A /* YNPOrderedItem.h */,
+				20B4BFEE9F6C7466EB8F8E5730D944C7 /* YNPOrderedItem.m */,
+				34065875AB43F1A4AEEB5AB90589E0A7 /* YNPPaymentOrder.h */,
+				15F37454B4FF25E59AABE202187D4FCD /* YNPPaymentOrder.m */,
+				A3E4AA55E25ED12B0008B979ED8ECD13 /* YNPPaymentOrderManager.h */,
+				5631562F021F33EA81FA88B2E323C90B /* YNPPaymentOrderManager.m */,
+				3E8B6F5092DAD68572EA318B3765DA49 /* YNPPaymentResponse.h */,
+				09365AEBF718BB31DAAD7C061F4DAA66 /* YNPPaymentResponse.m */,
+				35A5EBCD6BF334B6560C3893E5D3D1E6 /* YNPUrlUtils.m */,
+			);
+			name = Classes;
+			path = YenePay/Classes;
+			sourceTree = "<group>";
+		};
+		CD89A017BE1D8FED46D44B2E62DCCCB7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B174AE3B8A77FE6D4468CEA6D5012B3F /* YenePay.modulemap */,
+				2A20C4047757BFBA7DAF9815DB7ADD1E /* YenePay-dummy.m */,
+				C1BB471988A44A9BB2AEFFEBFB058A7D /* YenePay-Info.plist */,
+				EDA89D4B1C1DA3FCCD5F30435CD9A6C1 /* YenePay-prefix.pch */,
+				502BA1EA37768D610EB6CACAAB045B34 /* YenePay-umbrella.h */,
+				1361B091E587181559F3E40A2344BECF /* YenePay.debug.xcconfig */,
+				BCB7F5112BDD0CE014AE287A098E12C7 /* YenePay.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/YenePay";
@@ -231,7 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				191F8F61864478DCFB2417D04926B938 /* Development Pods */,
+				A63543D320235FC7F92FCDC7C206FC25 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				52D4FCA9DF78E8FBD29EBAC5D9CDF6D4 /* Products */,
 				C4457A1981D3317A62654A1499A586F5 /* Targets Support Files */,
@@ -244,16 +281,6 @@
 				578452D2E740E91742655AC8F1636D1F /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D389CB996EEBF49C319B0FF3E2A6B1DA /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				96D5C3528AFD5A189BFD40DA664FA810 /* LICENSE */,
-				FC61EDDF610A10B3B0D8B627E4CB0C46 /* README.md */,
-				93FA92D5FDD2EFC4161BE751C05EB65F /* YenePay.podspec */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,17 +302,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F42EEB564FA8BBCBA87EF5469118411E /* Headers */ = {
+		F583C172AEDBE3C2802DD22B06E4CE99 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5DA38D82CBE291735A1A63408A969A2 /* YenePay-umbrella.h in Headers */,
-				E983890CE6431A77005EEA5A68E0BE7B /* YenePay.h in Headers */,
-				DE5E074FABA14EA0E5E892FFDE67C68C /* YNPErrorCodes.h in Headers */,
-				0E8298E411BA27BB54D9D6F46AE9C0FC /* YNPOrderedItem.h in Headers */,
-				27429ADA538EFB8DAA0366AAF9E874A1 /* YNPPaymentOrder.h in Headers */,
-				660996860802BA8426A6A8362473E151 /* YNPPaymentOrderManager.h in Headers */,
-				4DB680C94D80D1AEE16CBDEB7A05B896 /* YNPPaymentResponse.h in Headers */,
+				EB87D1909F04F9A4C5F4C4B23FE82409 /* YenePay-umbrella.h in Headers */,
+				49379766DFDB08F5C42C902531070390 /* YenePay.h in Headers */,
+				683E32759FC3F8C208E46B11B5689634 /* YNPErrorCodes.h in Headers */,
+				631336D1C214A980155E3C3901F8CB24 /* YNPOrderedItem.h in Headers */,
+				5907AADF8D20ECA022AD7BFC90EDC0F5 /* YNPPaymentOrder.h in Headers */,
+				334ED3CAC68B542635F51706C2F3AC8D /* YNPPaymentOrder_internal.h in Headers */,
+				57ED2454D22FF41C497C351FB4CC3946 /* YNPPaymentOrderManager.h in Headers */,
+				C3B47F34CBD9760FDDAC554416EE82E6 /* YNPPaymentResponse.h in Headers */,
+				E5E620A3115D4A81E288081494864CC0 /* YNPPaymentResponse_internal.h in Headers */,
+				F71056EA19791AB3EFDACB18FF7FD8DA /* YNPUrlUtils.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,7 +334,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				5FCBD1764A5121F60421FD133A1380D9 /* PBXTargetDependency */,
+				4F851ABD7277CC28DCEAFCF9100097B6 /* PBXTargetDependency */,
 			);
 			name = "Pods-YenePay_Example";
 			productName = "Pods-YenePay_Example";
@@ -323,7 +353,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				D99308FE1C6C923033F1327753BCC17B /* PBXTargetDependency */,
+				36888C797334D902274E9FE7C4305960 /* PBXTargetDependency */,
 			);
 			name = "Pods-YenePay_Tests";
 			productName = "Pods-YenePay_Tests";
@@ -332,12 +362,12 @@
 		};
 		B85EE4AAE735228E6778A3D1C68A7843 /* YenePay */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C6E1F7C133824BD1294F81DB00AF533B /* Build configuration list for PBXNativeTarget "YenePay" */;
+			buildConfigurationList = D187F0BC84E75B41E60FD07A0F87DE0F /* Build configuration list for PBXNativeTarget "YenePay" */;
 			buildPhases = (
-				F42EEB564FA8BBCBA87EF5469118411E /* Headers */,
-				5B400B8B08A2E5E5C26EE1AA315C6566 /* Sources */,
-				8BF4ACB03E472BEBD62EA54EEC5DFBC5 /* Frameworks */,
-				77E9538C2EE5FD3BF464CEE3F42A56A3 /* Resources */,
+				F583C172AEDBE3C2802DD22B06E4CE99 /* Headers */,
+				0C4751FD5CE6D15D96F3EC4EE2B992A4 /* Sources */,
+				8CD2544C60688696FEB69C934137E6A0 /* Frameworks */,
+				D70B94EE9D06BCC30AD701203A6D5061 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -385,14 +415,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		77E9538C2EE5FD3BF464CEE3F42A56A3 /* Resources */ = {
+		7AFEB8A3C0CD5F30F0D06EBE0A135EAE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7AFEB8A3C0CD5F30F0D06EBE0A135EAE /* Resources */ = {
+		D70B94EE9D06BCC30AD701203A6D5061 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -402,17 +432,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5B400B8B08A2E5E5C26EE1AA315C6566 /* Sources */ = {
+		0C4751FD5CE6D15D96F3EC4EE2B992A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EAAED9044C899213FB9E8F1EADCC6A8 /* YenePay-dummy.m in Sources */,
-				119DB98B79F60341BF6A55A449DB981E /* YNPErrorCodes.m in Sources */,
-				71D29735189448C4180FBE3CFAC9740F /* YNPOrderedItem.m in Sources */,
-				C6C3A72B3322E365C85C5A4660DF7E23 /* YNPPaymentOrder.m in Sources */,
-				85B8F61D57C5664DE7BA8056EEEC3079 /* YNPPaymentOrderManager.m in Sources */,
-				8929780E9C585A0692174F8252A3384D /* YNPPaymentResponse.m in Sources */,
-				A962B69811D33934F7A8C7776F5F13F7 /* YNPUrlUtils.m in Sources */,
+				1D4E98CF84D0D9E06B1FF61390C655A9 /* YenePay-dummy.m in Sources */,
+				B28B13042BDD7C35F22C9CEAADFA999A /* YNPErrorCodes.m in Sources */,
+				1A0D5B2387FF006FA5E20602C133B7E1 /* YNPOrderedItem.m in Sources */,
+				90985225E5972D2ED427403112AFB541 /* YNPPaymentOrder.m in Sources */,
+				25E4C464F622CB785A848F4EBC39A6DF /* YNPPaymentOrderManager.m in Sources */,
+				069863EB36C9105F739E84652F7E33E3 /* YNPPaymentResponse.m in Sources */,
+				F68CCDABD0BE65365E76FBD8076F02C4 /* YNPUrlUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,52 +465,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5FCBD1764A5121F60421FD133A1380D9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = YenePay;
-			target = B85EE4AAE735228E6778A3D1C68A7843 /* YenePay */;
-			targetProxy = 03F417AB78A8784562B4F694D4DA7D24 /* PBXContainerItemProxy */;
-		};
-		D99308FE1C6C923033F1327753BCC17B /* PBXTargetDependency */ = {
+		36888C797334D902274E9FE7C4305960 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-YenePay_Example";
 			target = 2F791683172684C86C747DD81AE684B7 /* Pods-YenePay_Example */;
-			targetProxy = 5A575AD2B936563431B650F81B9B5342 /* PBXContainerItemProxy */;
+			targetProxy = 8027DF31D5232583679A042B1C7F18E9 /* PBXContainerItemProxy */;
+		};
+		4F851ABD7277CC28DCEAFCF9100097B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YenePay;
+			target = B85EE4AAE735228E6778A3D1C68A7843 /* YenePay */;
+			targetProxy = A891C707367D64E7724919390877E671 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0037A74CDE3D16136CB086781B538D9D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F3972B56CC9F5CF894C455196E39723A /* YenePay.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/YenePay/YenePay-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/YenePay/YenePay-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/YenePay/YenePay.modulemap";
-				PRODUCT_MODULE_NAME = YenePay;
-				PRODUCT_NAME = YenePay;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		1BD9A9A82E8FDC3C952DAFE6F96C81F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CEE2850DE4E48690F58A1E95033CF4B5 /* Pods-YenePay_Example.debug.xcconfig */;
@@ -541,6 +540,38 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		48911A3EF3C390DE063C326C0E11A4CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCB7F5112BDD0CE014AE287A098E12C7 /* YenePay.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YenePay/YenePay-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YenePay/YenePay-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/YenePay/YenePay.modulemap";
+				PRODUCT_MODULE_NAME = YenePay;
+				PRODUCT_NAME = YenePay;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -643,6 +674,37 @@
 			};
 			name = Release;
 		};
+		A934BCD5DB6DD22793F9389CCA5832E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1361B091E587181559F3E40A2344BECF /* YenePay.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YenePay/YenePay-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YenePay/YenePay-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/YenePay/YenePay.modulemap";
+				PRODUCT_MODULE_NAME = YenePay;
+				PRODUCT_NAME = YenePay;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		CCFA0D371BFD09EBACEB26D8F67072A2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 37905C55016CB9F512EEDB8DEDAC404E /* Pods-YenePay_Tests.release.xcconfig */;
@@ -743,38 +805,6 @@
 			};
 			name = Debug;
 		};
-		F567E1BD7E3BFCFA6A175D1F540744AB /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C77F4AFBDD60746188FB5F82A4503516 /* YenePay.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/YenePay/YenePay-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/YenePay/YenePay-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/YenePay/YenePay.modulemap";
-				PRODUCT_MODULE_NAME = YenePay;
-				PRODUCT_NAME = YenePay;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -805,11 +835,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C6E1F7C133824BD1294F81DB00AF533B /* Build configuration list for PBXNativeTarget "YenePay" */ = {
+		D187F0BC84E75B41E60FD07A0F87DE0F /* Build configuration list for PBXNativeTarget "YenePay" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0037A74CDE3D16136CB086781B538D9D /* Debug */,
-				F567E1BD7E3BFCFA6A175D1F540744AB /* Release */,
+				A934BCD5DB6DD22793F9389CCA5832E3 /* Debug */,
+				48911A3EF3C390DE063C326C0E11A4CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

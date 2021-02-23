@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YenePay'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'YenePay SDK for iOS.'
 
 # This description is used to generate tags and improve search results.
@@ -29,14 +29,14 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'YenePay/Classes/*'
+  s.source_files = 'YenePay/Classes/*', 'YenePay/Private/*'
   
   # s.resource_bundles = {
   #   'YenePay' => ['YenePay/Assets/*.png']
   # }
 
   s.public_header_files = 'YenePay/Classes/**/*.h'
-  s.xcconfig = { 'USER_HEADER_SEARCH_PATHS' => '$(inherited) "$(PODS_TARGET_SRCROOT)/Private"' }
+  s.private_header_files = 'YenePay/Private/**/*.h'
   
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
