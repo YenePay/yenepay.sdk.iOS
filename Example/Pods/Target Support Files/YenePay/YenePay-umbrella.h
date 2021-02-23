@@ -15,10 +15,7 @@
 #import "YNPOrderedItem.h"
 #import "YNPPaymentOrder.h"
 #import "YNPPaymentOrderManager.h"
-#import "YNPPaymentOrder_internal.h"
 #import "YNPPaymentResponse.h"
-#import "YNPPaymentResponse_internal.h"
-#import "YNPUrlUtils.h"
 
 FOUNDATION_EXPORT double YenePayVersionNumber;
 FOUNDATION_EXPORT const unsigned char YenePayVersionString[];
